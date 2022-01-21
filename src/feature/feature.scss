@@ -1,0 +1,172 @@
+@import "../color";
+@import "../responsive";
+.feature{
+    display: flex;  
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding-bottom: 120px;
+    position: relative;
+
+
+    .title{
+        font-size: 30px;
+        font-weight: 500;
+        margin: 0;
+
+    }
+    .desc{
+        width: 30vw;
+        text-align: center;
+        line-height: 25px;
+        color:$gray-blue;
+        @include mobile{
+            width: 86%;
+        }
+
+    }
+    .choices{
+        margin: 35px 0px;
+        padding-bottom: 22px;
+        border-bottom: 1px solid $gray-blue;
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            border: none;
+        }
+
+        .choice{
+            padding: 0px 40px;
+            padding-bottom: 20px;
+            cursor: pointer;
+            text-align: center;
+
+            &.active{
+                border-bottom: 3px solid $main-red;
+            }
+
+            @include mobile{
+                border-bottom: 1px solid $gray-blue;
+                padding: 10px 100px;
+               
+            }
+        }
+    }
+
+    .wrapper{
+        padding-left: 150px;
+        display: flex;
+        align-items: center;
+        margin-top: 35px;
+
+        @include mobile{
+            padding: 10px 0;
+            flex-direction: column;
+            margin-top: 15px;
+
+        }
+
+        .right{
+            flex:1.5;
+            @include mobile{
+               margin-top: 35px;
+            }
+
+            .title{
+                font-size: 40px;
+                font-weight: 500;
+                width: 90%;
+                margin: 0;
+                @include mobile{
+                    font-size: 30px;
+                    text-align: center;
+                    width: 100%;
+
+                }
+            }
+
+            .desc{
+                width: 70%;
+                margin-top: 20px;
+                font-size: 18px;
+                color:$gray-blue;
+                line-height: 30px;
+                text-align: left;
+                @include mobile{
+                    width: 90%;
+                    text-align: center;
+                    padding: 0 20px;
+
+                }
+            }
+
+            .buttons{
+                display: flex;
+                align-items: center;
+                margin-top: 20px;
+                @include mobile{
+                   display: none;
+
+                }
+
+                button{
+                    margin-right: 20px;
+                    width: 110px;
+                    padding: 15px 15px;
+                    border: none;
+                    font-weight: bold;
+                    border-radius: 5px;
+                    cursor: pointer;
+                    box-shadow: 0px 0px 5px 1px lightgray;
+                }
+
+                .chormeBtn{
+                    background-color: $main-blue;
+                    color:white;
+
+                }
+            }
+
+        }
+
+        .left{
+            flex:1.5;
+            justify-self: flex-end;
+            padding-left: 40px;
+            @include mobile{
+                flex:1;
+                padding-left: 0;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                padding-bottom: 48px;
+            }
+            .bg{
+                left: 0;
+                bottom: 2%;
+                position: absolute;
+                width: 42%;
+                height: 50%;
+                z-index: -1;
+                background-color: $main-blue;
+                border-radius: 0 50% 50% 0;
+                @include mobile{
+                    height: 80%;
+                    width: 90%;
+                }
+            }
+
+            img{
+                width: 80%;
+                height: 80%;
+                object-fit: cover;
+                @include mobile{
+                    width: 86%;
+                height: 86%;
+                }
+            }
+        }
+    }
+}
